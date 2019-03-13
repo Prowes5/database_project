@@ -1,0 +1,56 @@
+{% extends 'Mbase.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block main %}
+    <div id="page-wrapper" >
+            <div id="page-inner">
+				<div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            老师信息修改
+                        </h1>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <form role="form">
+                    <div class="main">
+                        <label>输入想要修改的工号             (注：如果输入为空那么代表未修改)</label>
+                        <div class="form-group input-group">
+                                <input type="text" class="form-control" name="Tea_no" placeholder="输入想要修改信息的工号">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit" href=""><i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                    </div>
+                </form>
+
+						<div class="main">
+                            <form role="form" method="post">
+                                        <!--fieldset disabled=""-->
+                                            <div class="form-group">
+                                                <label>姓名</label>
+                                                <input class="form-control" name="Tea_name" placeholder="请输入姓名" value="{{ ttea.TeaName }}">
+                                            </div>
+                                <button class="btn btn-default" type="submit">Update Submit</button>
+                                </form>
+										</div>
+
+			</div>
+                 <!-- /. ROW  -->
+				 <!--footer><p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p></footer>
+				</div>
+             <!-- /. PAGE INNER  -->
+    </div>
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

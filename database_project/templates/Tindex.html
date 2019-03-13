@@ -1,0 +1,126 @@
+{% extends 'Tbase.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block main %}
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+				<div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            <h11>欢迎,{{ tea.TeaName }}老师</h11>
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                学生地区人数占比
+                            </div>
+                            <div class="panel-body">
+
+                                {% for dic in dic1 %}
+                                    {{ dic }}：
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ dic1[dic] }}%">
+                                        {{ dic1[dic]}}%
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                学生政治面貌人数占比
+                            </div>
+                            <div class="panel-body">
+
+                                {% for dic in dic3 %}
+                                    {{ dic }}：
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ dic3[dic] }}%">
+                                        {{ dic3[dic]}}%
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                学生民族人数占比
+                            </div>
+                            <div class="panel-body">
+
+                                {% for dic in dic2 %}
+                                    {{ dic }}：
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ dic2[dic] }}%">
+                                        {{ dic2[dic]}}%
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                学生年龄人数占比
+                            </div>
+                            <div class="panel-body">
+
+                                {% for dic in dic4 %}
+                                    {{ dic }}：
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ dic4[dic] }}%">
+                                        {{ dic4[dic]}}%
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                成绩分数占比：
+                            </div>
+                            <div class="panel-body">
+                                <div class="progress progress-striped active">
+                                    {% if dic5['优秀']%}
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ dic5['优秀'] }}%">优秀：{{dic5['优秀']}}%</div>
+                                    {% endif %}
+                                    {% if dic5['良好'] %}
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ dic5['良好'] }}%">良好：{{ dic5['良好'] }}%</div>
+                                    {% endif %}
+                                    {% if dic5['中等'] %}
+                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ dic5['中等'] }}%">中等：{{ dic5['中等'] }}%</div>
+                                    {% endif %}
+                                    {% if dic5['及格'] %}
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ dic5['及格'] }}%">及格：{{ dic5['及格'] }}%</div>
+                                    {% endif %}
+                                    {% if dic5['不及格'] %}
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ dic5['不及格'] }}%">不及格：{{ dic5['不及格'] }}%</div>
+                                    {% endif %}
+                                    {% if dic5['无成绩'] %}
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ dic5['无成绩'] }}%">无成绩：{{ dic5['无成绩'] }}%</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                </div>
+			</div>
+                 <!-- /. ROW  -->
+				 <!--footer><p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p></footer>
+				</div>
+             <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+{% endblock %}

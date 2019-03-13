@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学籍管理系统</title>
+    <!-- Bootstrap Styles-->
+    <link href="{{ url_for('static',filename = 'css/bootstrap.css') }}" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="{{ url_for('static',filename = 'css/font-awesome.css') }}" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="{{ url_for('static',filename = 'js/morris/morris-0.4.3.min.css') }}" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="{{ url_for('static',filename = 'css/custom-styles.css') }}" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    {% block head %}
+
+    {% endblock %}
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="logo" href="http://www.dlnu.edu.cn/hhh/index.htm">
+					<img class="logo" src="{{url_for('static',filename = 'img/logo-mini.png')}}">
+				</a>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        {% if stu %}
+                            <li><a href="{{ url_for('Stable') }}"><i class="fa fa-user fa-fw"></i> {{ stu.StuName }}</a></li>
+                        {% elif tea %}
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i> {{ tea.TeaName}}老师</a></li>
+                        {% elif manage %}
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i> {{ manage.username }}</a> </li>
+                        {% else %}
+                        {% endif %}
+
+                        {% if stu %}
+                            <li><a href="{{ url_for('Spass') }}"><i class="fa fa-gear fa-fw"></i> 设置</a></li>
+                        {% elif tea %}
+                            <li><a href="{{ url_for('Tpass') }}"><i class="fa fa-gear fa-fw"></i> 设置</a></li>
+                        {% elif manage %}
+                            <li><a href="{{ url_for('Mpass') }}"><i class="fa fa-gear fa-fw"></i> 设置</a></li>
+                        {% else %}
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> 设置</a></li>
+                        {% endif %}
+                        <li class="divider"></li>
+                        <li><a href="{{ url_for('logout') }}"><i class="fa fa-sign-out fa-fw"></i> 注销</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+        </nav>
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a href="{{ url_for('Mindex') }}"><i class="fa fa-dashboard"></i> 首页 </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('Mmanage') }}"><i class="fa fa-desktop"></i> 老师管理 </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('Mchart') }}"><i class="fa fa-table"></i> 学生管理 </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('Mui_elements') }}"><i class="fa fa-edit"></i> 课程管理 </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+        {% block main%}
+
+        {% endblock %}
+    </div>
+    <script src="{{ url_for('static',filename = 'js/jquery-1.10.2.js') }}"></script>
+     <!-- Bootstrap Js -->
+    <script src="{{ url_for('static',filename = 'js/bootstrap.min.js') }}"></script>
+    <!-- Metis Menu Js -->
+    <script src="{{ url_for('static',filename = 'js/jquery.metisMenu.js') }}"></script>
+    <!-- Morris Chart Js -->
+    <script src="{{ url_for('static',filename = 'js/morris/raphael-2.1.0.min.js') }}"></script>
+    <script src="{{ url_for('static',filename = 'js/morris/morris.js') }}"></script>
+    {% block script %}
+
+    {% endblock %}
+    <!-- Custom Js -->
+    <script src="{{ url_for('static',filename = 'js/custom-scripts.js') }}"></script>
+
+</body>
+</html>

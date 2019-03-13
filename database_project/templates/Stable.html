@@ -1,0 +1,86 @@
+{% extends 'Sbase.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block main %}
+    <div id="page-wrapper" >
+            <div id="page-inner">
+				<div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            个人简历
+                        </h1>
+                    </div>
+                </div>
+					<form role="form">
+						<div class="main">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                                        <fieldset disabled="">
+                                            <div class="main">
+                                                <label for="disabledSelect">姓名</label>
+                                                <input class="form-control" id="disabledInput" type="text" placeholder="{{ stu.StuName }}" disabled="">
+                                            </div>
+											<div class="form-group">
+                                                <label for="disabledSelect">学号</label>
+                                                <input class="form-control" id="disabledInput" type="text" placeholder="{{ stu.StuNo }}" disabled="">
+                                            </div>
+											<div class="form-group">
+                                                <label for="disabledSelect">性别</label>
+                                                <input class="form-control" id="disabledInput" type="text" placeholder="{{ stu.StuGen }}" disabled="">
+                                            </div>
+											<div class="form-group">
+                                                <label for="disabledSelect">年级</label>
+                                                <input class="form-control" id="disabledInput" type="text" placeholder="{{ stu.StuGrade }}" disabled="">
+                                            </div>
+											<div class="form-group">
+                                                <label for="disabledSelect">专业</label>
+                                                <input class="form-control" id="disabledInput" type="text" placeholder="{{ stu.StuPro }}" disabled="">
+                                            </div>
+											<div class="form-group">
+                                                <label for="disabledSelect">学制</label>
+                                                <input class="form-control" id="disabledInput" type="text" placeholder="{{ stu.StuYear }}" disabled="">
+                                            </div>
+											<div class="form-group">
+                                                <label for="disabledSelect">现住址</label>
+                                                <input class="form-control" id="disabledInput" type="text" placeholder="{{ stu.StuAddr }}" disabled="">
+                                            </div>
+											<div class="form-group">
+                                                <label for="disabledSelect">年龄</label>
+                                                <input class="form-control" id="disabledInput" type="text" placeholder="{{ stu.StuAge }}" disabled="">
+                                            </div>
+											<div class="form-group">
+                                                <label for="disabledSelect">民族</label>
+                                                <input class="form-control" id="disabledInput" type="text" placeholder="{{ stu.StuNation }}" disabled="">
+                                            </div>
+											<div class="form-group">
+                                                <label for="disabledSelect">政治面貌</label>
+                                                <input class="form-control" id="disabledInput" type="text" placeholder="{{ stu.StuPol }}" disabled="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="disabledSelect">奖惩情况</label>
+                                                <textarea class="form-control1" id="disabledInput" type="text" placeholder="{{ stu.StuRec }}" disabled=""></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="disabledSelect">休复转退学标记</label>
+                                                <textarea class="form-control1" id="disabledInput" type="text" placeholder="{{ stu.StuFlag }}" disabled=""></textarea>
+                                            </div>
+
+
+
+                                        </fieldset>
+										</div>
+                    </form>
+			</div>
+                 <!-- /. ROW  -->
+				 <!--footer><p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p></footer>
+				</div>
+             <!-- /. PAGE INNER  -->
+    </div>
+         <!-- /. PAGE WRAPPER  -->
+{% endblock %}

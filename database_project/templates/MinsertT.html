@@ -1,0 +1,50 @@
+{% extends 'Mbase.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block main %}
+    <div id="page-wrapper" >
+            <div id="page-inner">
+				<div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            教师信息登记
+                        </h1>
+                    </div>
+                </div>
+					<form role="form" method="post">
+						<div class="main">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                                        <!--fieldset disabled=""-->
+                                            <div class="form-group">
+                                                <label>教师姓名</label>
+                                                <input class="form-control" name="Tea_name" placeholder="请输入姓名">
+                                            </div>
+											<div class="form-group">
+                                                <label>工号</label>
+                                                <input class="form-control" name="Tea_no" placeholder="请输入10位的学号">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>登录学籍系统密码</label>
+                                                <input class="form-control" type="password" name="Tea_pass" placeholder="请输入密码">
+                                            </div>
+                                                <button class="btn btn-default" type="submit">Insert Submit</button>
+										</div>
+                    </form>
+			</div>
+                 <!-- /. ROW  -->
+				 <!--footer><p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p></footer>
+				</div>
+             <!-- /. PAGE INNER  -->
+    </div>
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

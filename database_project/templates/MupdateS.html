@@ -1,0 +1,97 @@
+{% extends 'Mbase.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block main %}
+    <div id="page-wrapper" >
+            <div id="page-inner">
+				<div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            学生学籍修改
+                        </h1>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <form role="form">
+                    <div class="main">
+                        <label>输入想要修改的学号             (注：如果输入为空那么代表未修改)</label>
+                        <div class="form-group input-group">
+                                <input type="text" class="form-control" name="Stu_no_sel" placeholder="输入想要修改信息的学号">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit" href=""><i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                    </div>
+                </form>
+
+						<div class="main">
+                            <form role="form" method="post">
+                                        <!--fieldset disabled=""-->
+                                            <div class="form-group">
+                                                <label>姓名</label>
+                                                <input class="form-control" name="Stu_name" placeholder="请输入姓名" value="{{ sstu.StuName }}">
+                                            </div>
+											<div>
+                                                <label>性别</label>
+                                                <input class="form-control" name="Stu_gen" placeholder="请输入性别：男、女" value="{{ sstu.StuGen }}">
+                                            </div>
+											<div class="form-group">
+                                                <label>年级</label>
+                                                <input class="form-control" name="Stu_grade" placeholder="请输入入学年份" value="{{ sstu.StuGrade }}">
+                                            </div>
+											<div class="form-group">
+                                                <label>专业</label>
+                                                <input class="form-control" name="Stu_pro" placeholder="请输入专业" value="{{ sstu.StuPro }}">
+                                            </div>
+											<div class="form-group">
+                                                <label>学制</label>
+                                                <input class="form-control" name="Stu_year" placeholder="请输入学制，如4学年学制，只需输入4" value="{{ sstu.StuYear }}">
+                                            </div>
+											<div class="form-group">
+                                                <label>现住址</label>
+                                                <input class="form-control" name="Stu_addr" placeholder="请输入现住址" value="{{ sstu.StuAddr }}">
+                                            </div>
+											<div class="form-group">
+                                                <label>年龄</label>
+                                                <input class="form-control" name="Stu_age" placeholder="请输入年龄" value="{{ sstu.StuAge }}">
+                                            </div>
+											<div class="form-group">
+                                                <label>民族</label>
+                                                <input class="form-control" name="Stu_nation" placeholder="请输入民族" value="{{ sstu.StuNation }}">
+                                            </div>
+											<div class="form-group">
+                                                <label>政治面貌</label>
+                                                <input class="form-control" name="Stu_pol" placeholder="请输入政治面貌" value="{{ sstu.StuPol }}">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>奖惩情况</label>
+                                                <textarea class="form-control" rows="3" name="Stu_rec">{{ sstu.StuRec }}</textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>休复转退学标记</label>
+                                                <textarea class="form-control" rows="3" name="Stu_flag">{{ sstu.StuFlag }}</textarea>
+                                            </div>
+
+                                                <button class="btn btn-default" type="submit">Update Submit</button>
+                                </form>
+										</div>
+
+			</div>
+                 <!-- /. ROW  -->
+				 <!--footer><p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p></footer>
+				</div>
+             <!-- /. PAGE INNER  -->
+    </div>
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

@@ -1,0 +1,116 @@
+{% extends 'Mbase.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block main %}
+    <div id="page-wrapper" >
+            <div id="page-inner">
+				<div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            学生学籍登记
+                        </h1>
+                    </div>
+                </div>
+					<form role="form" method="post">
+						<div class="main">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                                        <!--fieldset disabled=""-->
+                                            <div class="form-group">
+                                                <label>姓名</label>
+                                                <input class="form-control" name="Stu_name" placeholder="请输入姓名">
+                                            </div>
+											<div class="form-group">
+                                                <label>学号</label>
+                                                <input class="form-control" name="Stu_no" placeholder="请输入10位的学号">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>登录学籍系统密码</label>
+                                                <input class="form-control" type="password" name="Stu_pass" placeholder="请输入密码">
+                                            </div>
+											<div class="form-group">
+                                                <label>性别</label>
+                                                <!--input class="form-control" name="Stu_gen" placeholder="请输入性别：男、女"-->
+                                                <select class="form-control" name="Stu_gen">
+                                                    <option>男</option>
+                                                    <option>女</option>
+                                                </select>
+                                            </div>
+											<div class="form-group">
+                                                <label>年级</label>
+                                                <input class="form-control" name="Stu_grade" placeholder="请输入入学年份">
+                                            </div>
+											<div class="form-group">
+                                                <label>专业</label>
+                                                <input class="form-control" name="Stu_pro" placeholder="请输入专业">
+                                            </div>
+											<div class="form-group">
+                                                <label>学制</label>
+                                                <!--input class="form-control" name="Stu_year" placeholder="请输入学制，如4学年学制，只需输入4"-->
+                                                <select class="form-control" name="Stu_year">
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                    <option>7</option>
+                                                    <option>8</option>
+                                                    <option>9</option>
+                                                    <option>10</option>
+                                                </select>
+                                            </div>
+											<div class="form-group">
+                                                <label>现住址</label>
+                                                <input class="form-control" name="Stu_addr" placeholder="请输入现住址">
+                                            </div>
+											<div class="form-group">
+                                                <label>年龄</label>
+                                                <input class="form-control" name="Stu_age" placeholder="请输入年龄">
+                                            </div>
+											<div class="form-group">
+                                                <label>民族</label>
+                                                <input class="form-control" name="Stu_nation" placeholder="请输入民族">
+                                            </div>
+											<div class="form-group">
+                                                <label>政治面貌</label>
+                                                <!--input class="form-control" name="Stu_pol" placeholder="请输入民族"-->
+                                                <select class="form-control" name="Stu_pol">
+                                                    <option>群众</option>
+                                                    <option>共青团员</option>
+                                                    <option>共产党员</option>
+                                                    <option>其他</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>奖惩情况</label>
+                                                <textarea class="form-control" rows="3" name="Stu_rec"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>休复转退学标记</label>
+                                                <textarea class="form-control" rows="3" name="Stu_flag"></textarea>
+                                            </div>
+
+                                                <button class="btn btn-default" type="submit">Insert Submit</button>
+
+
+
+
+                                        </fieldset>
+										</div>
+                    </form>
+			</div>
+                 <!-- /. ROW  -->
+				 <!--footer><p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p></footer>
+				</div>
+             <!-- /. PAGE INNER  -->
+    </div>
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

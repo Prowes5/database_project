@@ -1,0 +1,142 @@
+{% extends 'Sbase.html' %}
+
+{% block head %}
+    <link href="{{ url_for('static',filename = 'js/dataTables/dataTables.bootstrap.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block main %}
+    <div id="page-wrapper" >
+             <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            您现在所选的课程： <small>Responsive tables</small>
+                        </h1>
+                    </div>
+                </div>
+			    <div class="row">
+                <div class="col-md-12">
+                    <!-- Advanced Tables -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             已选的课程
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>课程号</th>
+                                            <th>课程名称</th>
+                                            <th>学分</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for sc in scs %}
+                                            <tr>
+                                                <th>{{ sc.LessonNo }}</th>
+                                                <th>{{ sc.LessonName }}</th>
+                                                <th>{{ sc.LessonCredits }}</th>
+                                            </tr>
+                                        {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-12">
+                    <!-- Advanced Tables -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             未选的课程
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>课程号</th>
+                                            <th>课程名称</th>
+                                            <th>学分</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for notsc in notscs %}
+                                        <tr>
+                                            <th>{{ notsc.LessonNo }}</th>
+                                            <th>{{ notsc.LessonName }}</th>
+                                            <th>{{ notsc.LessonCredits }}</th>
+                                        </tr>
+                                    {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            添加未选的课程
+                        </div>
+                        <!--div class="panel-body"-->
+                            <!--div class="col-md-6"-->
+                                <form role="form" action="" method="post">
+                                    <div class="form-group">
+                                        <div class="panel-body">
+                                            <label>课程号</label>
+                                            <input class="form-control" name="lesson_no" placeholder="请输入5位未选的课程的号">
+                                        </div>
+                                        <div class="panel-body">
+                                            <button class="btn btn-default" type="submit">Insert Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            <!--/div-->
+                        <!--/div-->
+
+                    </div>
+                </div>
+                 <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            删除已选的课程
+                        </div>
+                                <form role="form" action="" method="post">
+                                    <div class="form-group">
+                                        <div class="panel-body">
+                                            <label>课程号</label>
+                                            <input class="form-control" name="lesson_no_last" placeholder="请输入你想要删除的已选的课程">
+                                        </div>
+                                        <div class="panel-body">
+                                            <button class="btn btn-default" type="submit">Delete Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                    </div>
+                </div>
+
+
+
+                    <!--End Advanced Tables -->
+
+            </div>
+        </div>
+               <footer><!--p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p--></footer>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+            $(document).ready(function () {
+                $('#dataTables-example').dataTable();
+            });
+    </script>
+    <script src="{{ url_for('static',filename = 'js/dataTables/jquery.dataTables.js') }}"></script>
+    <script src="{{ url_for('static',filename = 'js/dataTables/dataTables.bootstrap.js') }}"></script>
+{% endblock %}
